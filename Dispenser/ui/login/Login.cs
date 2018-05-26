@@ -18,12 +18,12 @@ namespace Dispenser.ui.login
         }
 
         // 定义信号槽
-        public delegate void LoginEventChanged();
-        public event LoginEventChanged btn_login_changed;
+        public delegate void FormLoginEventChanged();
+        public event FormLoginEventChanged on_btn_login_clicked;
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            btn_login_changed();
+            on_btn_login_clicked();
             this.Hide();
         }
 

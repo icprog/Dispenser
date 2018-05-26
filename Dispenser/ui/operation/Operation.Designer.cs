@@ -45,6 +45,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
+            this.HideOnClose = true;
             this.Name = "Operation";
             this.Text = "操作界面";
             this.Load += new System.EventHandler(this.Operation_Load);

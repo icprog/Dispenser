@@ -35,8 +35,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(145, 278);
+            this.DockAreas = WeifenLuo.WinFormsUI.Docking.DockAreas.DockLeft;
+            this.HideOnClose = true;
             this.Name = "Navigation";
-            this.Text = "Navigation";
+            this.Text = "导航栏";
             this.ResumeLayout(false);
 
         }
