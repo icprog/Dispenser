@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{141C2BFE-7729-416B-AD2B-BB808E8ED5AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dispenser</RootNamespace>
+    <AssemblyName>Dispenser</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2003, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2003.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2012, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2012.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2013, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2013.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ui\communication\Communication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\communication\Communication.Designer.cs">
+      <DependentUpon>Communication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\io\IO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\io\IO.Designer.cs">
+      <DependentUpon>IO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\mainwindow\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\mainwindow\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\motor\Motor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\motor\Motor.Designer.cs">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\navigation\Navigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\navigation\Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\operation\HNavigationBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\operation\HNavigationBar.Designer.cs">
+      <DependentUpon>HNavigationBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\operation\Operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\operation\Operation.Designer.cs">
+      <DependentUpon>Operation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\pointDebug\PointDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\pointDebug\PointDebug.Designer.cs">
+      <DependentUpon>PointDebug.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ui\communication\Communication.resx">
+      <DependentUpon>Communication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\io\IO.resx">
+      <DependentUpon>IO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\mainwindow\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\motor\Motor.resx">
+      <DependentUpon>Motor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\navigation\Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\operation\HNavigationBar.resx">
+      <DependentUpon>HNavigationBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\operation\Operation.resx">
+      <DependentUpon>Operation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\pointDebug\PointDebug.resx">
+      <DependentUpon>PointDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VNavigationBar\VNavigationBar.csproj">
+      <Project>{EF3C92F3-8FB5-46C1-8665-D402809FB196}</Project>
+      <Name>VNavigationBar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
