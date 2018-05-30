@@ -17,16 +17,15 @@ namespace Dispenser.ui.login
             InitializeComponent();
         }
 
-        // 定义信号槽
+        // 自定义信号
         public delegate void FormLoginEventChanged();
         public event FormLoginEventChanged on_btn_login_clicked;
 
+        // BTN
         private void btn_login_Click(object sender, EventArgs e)
         {
             on_btn_login_clicked();
             this.Hide();
         }
-
-
     }
 }

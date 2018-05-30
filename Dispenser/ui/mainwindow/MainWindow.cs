@@ -77,7 +77,7 @@ namespace Dispenser.ui.mainwindow
         }
         #endregion
 
-        #region Action
+        #region Actions
         // 登陆
         private void action_login_Click(object sender, EventArgs e)
         {
@@ -172,6 +172,6 @@ namespace Dispenser.ui.mainwindow
         {
 
         }
+        #endregion
     }
 }
-#endregion

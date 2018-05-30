@@ -32,8 +32,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\CSJson\Json110r2\Bin\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,8 +67,19 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
     </Reference>
+    <Reference Include="XPTable">
+      <HintPath>bin\Debug\XPTable\XPTable.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pointDataSet.cs">
+      <DependentUpon>pointDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pointDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pointDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ui\communication\Communication.cs">
@@ -157,6 +172,17 @@
     <EmbeddedResource Include="ui\pointDebug\PointDebug.resx">
       <DependentUpon>PointDebug.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="pointDataSet.xsc">
+      <DependentUpon>pointDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pointDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pointDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pointDataSet.xss">
+      <DependentUpon>pointDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -175,6 +201,11 @@
       <Project>{EF3C92F3-8FB5-46C1-8665-D402809FB196}</Project>
       <Name>VNavigationBar</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="point.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

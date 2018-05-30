@@ -38,6 +38,7 @@
             this.HideOnClose = true;
             this.Name = "IO";
             this.Text = "IO调试";
+            this.Load += new System.EventHandler(this.IO_Load);
             this.ResumeLayout(false);
 
         }

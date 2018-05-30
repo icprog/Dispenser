@@ -18,5 +18,11 @@ namespace Dispenser.ui.pointDebug
         {
             InitializeComponent();
         }
+
+        private void PointDebug_Load(object sender, EventArgs e)
+        {
+            // TODO: 这行代码将数据加载到表“pointDataSet.workStation1”中。您可以根据需要移动或删除它。
+            this.workStation1TableAdapter.Fill(this.pointDataSet.workStation1);
+        }
     }
 }
